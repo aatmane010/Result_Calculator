@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 85% auto;
+    background-color: rgba(112, 112, 112, 0.1);
+}
+
+
+/* ========== HEADER ========== */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    border-bottom: 1px solid #fff;
+    background-color: rgba(112, 112, 112, 0.2);
+}
+
+.header__title{
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    text-shadow: 0 2px 4px #333;
+}
+
+
+/* ========== MAIN ========== */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(112, 112, 112, 0.1);
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px; */
+}
+
+.main__title{
+    margin-bottom: 1rem;
+    padding: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    color:rgba(112, 112, 112, 0.8);
+}
+
+
+/* ========== CALCULATOR SECTION ========== */
+.calc__section{
+    display: initial; /* i will change it to none on JS */
+    width: 50%;
+    padding: 90px 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(112, 112, 112, 0.5);
+}
+
+.calc__input{
+    margin-bottom: 30px;
+    padding: 10px 10px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: .9rem;
+    font-weight: 500;
+    color: rgba(112, 112, 112, 0.9);
+    background-color: rgba(112, 112, 112, 0.2);
+}
+
+#name-input{
+    width: 100%;
+}
+
+.notes__container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.note__input{
+    width: 100px;
+    -moz-appearance: textfield; /* for firefox */
+}
+
+.note__input::-webkit-outer-spin-button,
+.note__input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btns__container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+.btn{
+    padding: .5rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(112, 112, 112, 0.5);
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.first__btn{
+    border: none;
+    color: #fff;
+    background-color:rgba(112, 112, 112, 0.5);
+}
+
+.first__btn:hover{
+    color:rgba(112, 112, 112, 0.8);
+    background-color: rgba(112, 112, 112, 0.2);
+    transition: .5s;
+}
+
+#reset-btn{
+    color:rgba(112, 112, 112, 0.9);
+}
+
+#reset-btn:hover{
+    color: #fff;
+    background-color: rgba(112, 112, 112, 0.2);
+    transition: .5s;
+}
+
+
+/* ========== RESULT SECTION ========== */
+.result__section{
+    display: none;  /* i will change it to initial on JS */
+    width: 50%;
+    padding: 90px 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(112, 112, 112, 0.5);
+}
+
+.output__container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* display: flex;
+    justify-content: space-around; */
+    margin-bottom: 30px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color:rgba(58, 58, 58, 0.9);
+    background-color: rgba(112, 112, 112, 0.2);
+}
+
+.output__title{
+    padding-left: 100px;
+}
+
+.output__result{
+    text-align: center;
+}
+
+.btns__container{
+    display: flex;
+    justify-content: center;
+}
+
+#ok-btn{
+    width: 100px;
+}
+
+
+/* ========== FOOTER SECTION ========== */
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    border-top: 1px solid #fff;
+    background-color: rgba(112, 112, 112, 0.2);
+}
+
+.copyright__text{
+    color: rgb(99, 99, 99);
+}
+.copyright__text a{
+    font-weight: 600;
+    text-decoration: none;
+    color:rgb(48, 48, 48);
+}
+
+/* ========== WORNING MSG SECTION ========== */
+#worning-msg{
+    width: 40%;
+    height: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: salmon;
+}
